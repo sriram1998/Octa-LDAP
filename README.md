@@ -1,6 +1,6 @@
 ### Usage Instructions
 
-1. Change config.py and add your username and password. For example :-
+1. Copy config.py.example to config.py and add your username and password. For example :-
 ```
 LOGIN_USERNAME = '106115027@nitt.edu'
 LOGIN_PASSWORD = 'deepisgod'
@@ -11,4 +11,4 @@ LOGIN_PASSWORD = 'deepisgod'
 
 3. Hit https://localhost:5000/info/<username>
 
-4. Buy Gautham a drink for every time it works
+4. Buy Gautham and Venkat a drink for every time it works

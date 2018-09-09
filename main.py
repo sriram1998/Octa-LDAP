@@ -40,4 +40,4 @@ def getInfo(username):
     return jsonify(returnValue)
 
 if __name__ == '__main__':
-   app.run()
+	app.run(port=config.PORT)
