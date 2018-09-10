@@ -37,30 +37,30 @@ def getInfo(username):
 			else:
 				returnValue['faculty'] = False
 				if year[5] == '4':
-					details    = result[0][1]['description'][0].strip().split(' ')
-					course = details[0]
-					dept   = details[1]
-					state  = details[4]
-					phone  = details[5]
+					details = result[0][1]['description'][0].strip().split(' ')
+					course  = details[0].strip('.')
+					dept    = details[1].strip(' ')
+					state   = details[4].strip(' ')
+					phone   = details[5].strip(' ')
 				if year[5] == '5':
-					course = details[0]
-					dept   = details[1]
-					state  = details[4]
-					phone  = details[5]
+					course = details[0].strip('.')
+					dept   = details[1].strip(' ')
+					state  = details[4].strip(' ')
+					phone  = details[5].strip(' ')
 				if year[5] == '6':
-					course = details[0]
-					dept   = details[1]
-					state  = details[3]
-					phone  = details[4]
+					course = details[0].strip('.')
+					dept   = details[1].strip(' ')
+					state  = details[3].strip(' ')
+					phone  = details[4].strip(' ').strip('ph:')
 				if year[5] == '7':
-					course = details[0]
-					dept   = details[1]
-					state  = details[4]
-					phone  = details[5]
+					course = details[0].strip('.').strip(' ')
+					dept   = details[1].strip(' ')
+					state  = details[4].strip(' ')
+					phone  = details[5].strip(' ').strip('ph:')
 				if year[5] == '8':
-					course = details[0]
-					dept   = details[1]
-					state  = details[5]
+					course = details[0].strip('.')
+					dept   = details[1].strip(' ')
+					state  = details[5].strip(' ')
 					phone  = result[0][1]['telephoneNumber'][0]
 
 				returnValue['name']        = name
@@ -73,10 +73,7 @@ def getInfo(username):
 		
 		# Its nice to the server to disconnect and free resources when done
 		l.unbind_s()
-		
-		
-	
-		
+
 		return jsonify(returnValue)
 	
 	except (KeyboardInterrupt, SystemExit):
