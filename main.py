@@ -14,7 +14,7 @@ def getInfo(username):
 		l.protocol_version = ldap.VERSION3
 
 		# Bind/authenticate with a user with apropriate rights to add objects
-		l.simple_bind_s(config.LOGIN_USERNAME,config.LOGIN_PASSWORD)
+		l.simple_bind_s(config.LOGIN_USERNAME+"@octa.edu",config.LOGIN_PASSWORD)
 
 		ldap_base = "dc=octa,dc=edu"
 		query = "(cn="+username+")"
